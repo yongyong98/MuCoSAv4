@@ -73,7 +73,7 @@ The complete protocol is frozen in
 ## Repository structure
 
 ```text
-MuCoSAv4/
+PAIR-BST/
 |-- configs/                 # Paths, models, comparisons, and protocol
 |-- docs/                    # Protocol and public-release documentation
 |-- locks/                   # Non-identifying dataset/model contracts
@@ -91,8 +91,8 @@ and an NVIDIA RTX 3090. Python 3.11 or 3.12 is required. Install a PyTorch build
 appropriate for your platform if the reference CUDA build is not suitable.
 
 ```bash
-git clone https://github.com/yongyong98/MuCoSAv4.git
-cd MuCoSAv4
+git clone https://github.com/yongyong98/PAIR-BST.git
+cd PAIR-BST
 python -m venv .venv
 ```
 

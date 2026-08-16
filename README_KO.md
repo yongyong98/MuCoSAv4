@@ -71,7 +71,7 @@ H5 feature, prediction, 로컬 경로 설정과 가명 식별자가 포함된 fo
 ## 저장소 구성
 
 ```text
-MuCoSAv4/
+PAIR-BST/
 |-- configs/                 # 경로, 모델, 비교 및 protocol 설정
 |-- docs/                    # Protocol 및 공개 범위 문서
 |-- locks/                   # 비식별 dataset/model contract
@@ -89,8 +89,8 @@ MuCoSAv4/
 맞는 PyTorch build를 사용하십시오.
 
 ```bash
-git clone https://github.com/yongyong98/MuCoSAv4.git
-cd MuCoSAv4
+git clone https://github.com/yongyong98/PAIR-BST.git
+cd PAIR-BST
 python -m venv .venv
 ```
 
