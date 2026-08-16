@@ -1,0 +1,70 @@
+{
+  "lock_schema": "pairbst.models.expected.v1",
+  "models": {
+    "resnet50_in1k_v2": {
+      "architecture": "torchvision/resnet50 IMAGENET1K_V2",
+      "expected_bytes": 102540417,
+      "expected_sha256": "11AD3FA62CA79E40ADDFD354A8EC4B7C75143B3038B8D2A807FBC68DEAB379CA",
+      "feature_dim": 2048,
+      "required": true
+    },
+    "swin_t_in1k_v1": {
+      "architecture": "torchvision/swin_t IMAGENET1K_V1",
+      "expected_bytes": 113445839,
+      "expected_sha256": "704CEDA373461B0A224FCDDDD75CD2A5E9F8064512ED47ADBDDEF7F343FD147B",
+      "feature_dim": 768,
+      "required": true,
+      "source_url": "https://download.pytorch.org/models/swin_t-704ceda3.pth",
+      "transform": "resize 232 bicubic, center crop 224, ImageNet mean/std",
+      "status": "ACQUIRED_AND_HASH_LOCKED_2026-08-14"
+    },
+    "retccl_resnet50": {
+      "architecture": "RetCCL ResNet-50",
+      "architecture_source_sha256": "FF1AB31BF7A9E475A51EE8CB50068B82C9FCE6E2616DC6AFADD6D3884F865A06",
+      "expected_bytes": 94367005,
+      "expected_sha256": "931956F31D3F1A3F6047F3172B9E59EE3460D29F7C0C2BB219CBC8E9207795FF",
+      "feature_dim": 2048,
+      "required": true
+    },
+    "uni_vitl16": {
+      "architecture": "MahmoodLab UNI ViT-L/16",
+      "expected_bytes": 1213527781,
+      "expected_sha256": "56EF09B44A25DC5C7EEDC55551B3D47BCD17659A7A33837CF9ABC9EC4E2FFB40",
+      "feature_dim": 1024,
+      "required": true
+    },
+    "uni2_h": {
+      "architecture": "MahmoodLab UNI2-H vit_giant_patch14_224",
+      "expected_bytes": 2725669217,
+      "expected_sha256": "6E077EDA234BEBC595868D918D3458D9DD32A050199B0FF04443B2F46A0A3B1E",
+      "feature_dim": 1536,
+      "required": true,
+      "status": "ACQUIRED_AND_HASH_VERIFIED_2026-08-14"
+    },
+    "prov_gigapath": {
+      "architecture": "Prov-GigaPath DINOv2 ViT-giant/16 tile encoder",
+      "expected_bytes": 4540023137,
+      "expected_sha256": "877947214318AFA9E011754B74BBC3894A1F480A253AFC7BC8045B8321DEDD63",
+      "feature_dim": 1536,
+      "required": true,
+      "source_revision": "prov-gigapath/prov-gigapath@64f9e26c15019f2d4f6d9113c6822f88bb16b01b",
+      "upstream_config_sha256": "6937EB16679F8DE311D6EDD824930C27A2B1A1029A24907BE59CED33A908AE55",
+      "status": "ACQUIRED_AND_HASH_VERIFIED_2026-08-15"
+    },
+    "virchow2": {
+      "architecture": "Paige Virchow2 ViT-H/14; CLS plus mean patch embedding",
+      "expected_bytes": 2525001112,
+      "expected_sha256": "8D6CEA947EB2418C3B0DFF48CFB9B238E47744AB0DFCA21B2B0637B140769B4B",
+      "feature_dim": 2560,
+      "required": true,
+      "source_revision": "paige-ai/Virchow2@3158645804b69e3f3bc4439d4116edddf0840a72",
+      "upstream_config_sha256": "7DB445B996BB165E88FE70E826C2EBB530539A2B1D136AA16EEB847DF5F1E3DB",
+      "status": "ACQUIRED_AND_HASH_VERIFIED_2026-08-15"
+    }
+  },
+  "legacy_only": {
+    "swin_base_patch4_window7_224": {
+      "reason": "Recovered code used Swin-Base, whereas submitted Table 5 is labelled Swin-T. Never mix this model into the revision-primary table."
+    }
+  }
+}

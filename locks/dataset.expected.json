@@ -1,0 +1,21 @@
+{
+  "lock_schema": "pairbst.dataset.expected.v1",
+  "figshare_collection": "8223469",
+  "figshare_version": 1,
+  "metadata_rows": 2252,
+  "metadata_sha256": "BF5B5D802F67BD91730FF54E747F25254E7D92B9705B704E7F529011A86C3B84",
+  "required_manifest_rows": 2253,
+  "required_manifest_sha256": "A10A874C1BC2FB5E29D97E598E74D53A7B76127D8595CB27EA4292690692304A",
+  "roi_png_count": 2252,
+  "roi_shape": [4096, 4096, 3],
+  "patient_uid_columns": ["diagnosis", "patient_idx"],
+  "expected_patient_count": 268,
+  "expected_slide_count": 470,
+  "class_counts": {
+    "diagnosis": 33,
+    "differentiation": 11,
+    "growth_pattern": 6
+  },
+  "published_vocabulary_is_literal": true
+}
+

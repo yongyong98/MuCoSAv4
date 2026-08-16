@@ -1,0 +1,6 @@
+{
+  "hold": true,
+  "reason": "Public code release default. Configure and validate local data, folds, and model identities before execution.",
+  "set_on": "2026-08-16",
+  "release_authority": null
+}

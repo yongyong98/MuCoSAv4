@@ -1,0 +1,73 @@
+schema: pairbst.models.v1
+primary_transform_profile: official_model_specific
+sensitivity_transform_profile: legacy_common_224
+execution:
+  model_residency: one_at_a_time
+  materialize_patch_png: false
+  default_grid_batch_size: 32
+  pooling_dtype: float32
+models:
+  resnet50_v2:
+    manuscript_label: ResNet
+    checkpoint_path_key: weights.resnet50_v2
+    expected_bytes: 102540417
+    expected_sha256: 11AD3FA62CA79E40ADDFD354A8EC4B7C75143B3038B8D2A807FBC68DEAB379CA
+    feature_dim: 2048
+    extraction_batch_size_rtx3090_fp32: 128
+    official_transform: resize_232_bilinear_center_crop_224_imagenet
+  swin_t:
+    manuscript_label: Swin-T
+    checkpoint_path_key: weights.swin_t
+    expected_bytes: 113445839
+    expected_sha256: 704CEDA373461B0A224FCDDDD75CD2A5E9F8064512ED47ADBDDEF7F343FD147B
+    feature_dim: 768
+    extraction_batch_size_rtx3090_fp32: 64
+    official_transform: resize_232_bicubic_center_crop_224_imagenet
+  retccl:
+    manuscript_label: RetCCL
+    checkpoint_path_key: weights.retccl
+    architecture_source: ../../weights/RetCCL/ResNet.py
+    architecture_source_sha256: FF1AB31BF7A9E475A51EE8CB50068B82C9FCE6E2616DC6AFADD6D3884F865A06
+    expected_bytes: 94367005
+    expected_sha256: 931956F31D3F1A3F6047F3172B9E59EE3460D29F7C0C2BB219CBC8E9207795FF
+    feature_dim: 2048
+    extraction_batch_size_rtx3090_fp32: 128
+    official_transform: resize_256_bilinear_imagenet
+  uni:
+    manuscript_label: UNI
+    checkpoint_path_key: weights.uni
+    expected_bytes: 1213527781
+    expected_sha256: 56EF09B44A25DC5C7EEDC55551B3D47BCD17659A7A33837CF9ABC9EC4E2FFB40
+    feature_dim: 1024
+    extraction_batch_size_rtx3090_fp32: 32
+    official_transform: resize_224_bilinear_imagenet
+  uni2_h:
+    manuscript_label: UNI-2
+    checkpoint_path_key: weights.uni2_h
+    expected_bytes: 2725669217
+    expected_sha256: 6E077EDA234BEBC595868D918D3458D9DD32A050199B0FF04443B2F46A0A3B1E
+    feature_dim: 1536
+    extraction_batch_size_rtx3090_fp32: 8
+    official_transform: resize_224_bilinear_imagenet
+  prov_gigapath:
+    manuscript_label: Prov-GigaPath
+    checkpoint_path_key: weights.prov_gigapath
+    expected_bytes: 4540023137
+    expected_sha256: 877947214318AFA9E011754B74BBC3894A1F480A253AFC7BC8045B8321DEDD63
+    upstream_revision: 64f9e26c15019f2d4f6d9113c6822f88bb16b01b
+    upstream_config_sha256: 6937EB16679F8DE311D6EDD824930C27A2B1A1029A24907BE59CED33A908AE55
+    feature_dim: 1536
+    extraction_batch_size_rtx3090_fp32: 16
+    official_transform: resize_256_bicubic_center_crop_224_imagenet
+    representation: official_tile_encoder_cls
+  virchow2:
+    manuscript_label: Virchow2
+    checkpoint_path_key: weights.virchow2
+    expected_bytes: 2525001112
+    expected_sha256: 8D6CEA947EB2418C3B0DFF48CFB9B238E47744AB0DFCA21B2B0637B140769B4B
+    upstream_revision: 3158645804b69e3f3bc4439d4116edddf0840a72
+    upstream_config_sha256: 7DB445B996BB165E88FE70E826C2EBB530539A2B1D136AA16EEB847DF5F1E3DB
+    feature_dim: 2560
+    extraction_batch_size_rtx3090_fp32: 32
+    official_transform: resize_224_bicubic_center_crop_224_imagenet
+    representation: concat_cls_and_mean_patch_excluding_four_register_tokens

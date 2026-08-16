@@ -1,0 +1,33 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+build/
+dist/
+
+# Local paths and controlled-source locations
+configs/paths.local.yaml
+.env
+.env.*
+data/
+weights/
+wandb/
+.wandb/
+checkpoints/
+locks/*
+!locks/dataset.expected.json
+!locks/models.expected.json
+!locks/EXECUTION_HOLD.example.json
+
+# Large/gated binaries and resumable feature stores
+*.bin
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.h5
+*.partial.h5
+
+# Raw and derived run artifacts remain local or in approved archives.
+outputs/

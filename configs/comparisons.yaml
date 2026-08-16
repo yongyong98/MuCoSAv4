@@ -1,0 +1,13 @@
+families:
+  sampling_within_model:
+    reference: center
+    alternatives: [grid_mean, grid_max]
+    metrics: [macro_f1, balanced_accuracy]
+    retrieval_metrics: [average_precision_at_k, majority_vote_correct]
+  model_within_sampling:
+    reference: resnet50_v2
+    alternatives: [swin_t, retccl, uni, uni2_h, prov_gigapath, virchow2]
+    metrics: [macro_f1, balanced_accuracy]
+    retrieval_metrics: [average_precision_at_k, majority_vote_correct]
+correction: holm
+pairing_unit: patient

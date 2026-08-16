@@ -1,0 +1,67 @@
+protocol_id: cv3_independent_seed_oof_v1
+protocol_status: canonical
+patient_uid_columns: [diagnosis, patient_idx]
+patient_uid_certified_by_owner: true
+tasks: [diagnosis, differentiation, growth_pattern]
+outer_cv:
+  folds: 3
+  fold_ids: [0, 1, 2]
+  target_patient_counts: [90, 89, 89]
+  assignment_seed: 20260814
+  train_folds_per_run: 2
+  test_folds_per_run: 1
+  validation_split: null
+  require_every_class_in_every_fold: true
+feature_protocol:
+  canonical_roi_size: 4096
+  center_crop_yx: [1936, 2160, 1936, 2160]
+  grid_rows: 16
+  grid_cols: 16
+  grid_patch_size: 256
+  grid_order: row_major
+  pooling_dtype: float32
+  normalize_before_pooling: false
+  primary_transform: official_model_specific
+  sensitivity_transform: legacy_common_224
+linear_probe:
+  scaler: train_only_standard_scaler
+  head: linear_with_bias
+  class_weight: inverse_frequency_training_roi
+  class_weight_normalization: mean_one
+  loss: weighted_cross_entropy
+  optimizer: AdamW
+  learning_rate: 0.001
+  weight_decay: 0.01
+  epochs: 10
+  batch_size: 256
+  scheduler: null
+  early_stopping: false
+  seeds: [101, 202, 303, 404, 505]
+  primary_metric_unit: complete_oof_per_seed
+  seed_aggregation: metric_mean_sd
+  probability_ensemble_across_seeds: false
+  seed_sd_ddof: 1
+  legacy_seed_probability_ensemble:
+    enabled: false
+retrieval:
+  distance: exact_cosine
+  l2_normalize_final_roi_feature: true
+  query_fold: held_out
+  gallery_folds: training_two
+  exclude_same_patient: true
+  tie_break: roi_uid
+  k: [5, 10, 15, 20]
+statistics:
+  primary_uncertainty: sample_sd_across_complete_oof_per_seed
+  patient_cluster_bootstrap: separately_by_seed
+  bootstrap_unit: patient
+  bootstrap_iterations: 10000
+  confidence_level: 0.95
+  paired_significance_claims: disabled
+reporting:
+  decimals: 3
+  primary_cell: mean_sd_across_complete_oof_per_seed
+  primary_source: classification_seed_oof_metrics.csv
+  seed_sd_ddof: 1
+  pooled_oof_metrics: false
+  probability_ensemble_across_seeds: false
