@@ -2,6 +2,10 @@
 
 ## 골·연부조직 종양을 위한 영역 단위 조직병리 데이터셋
 
+**저자:** Gyu Yeong Kim, Yongjun Jeon, Hoyeon Jeong, Donggeon Lee, Seungkyun Lee, Hyungbin Kim, Yurimi Lee, Jihwan Kim, Seog-yun Park, Kyu-Hwan Jung, David Joon Ho, June Hyuk Kim, Yoon-La Choi
+
+**소속 기관:** Samsung Medical Center · Sungkyunkwan University · National Cancer Center · The State University of New York, Korea
+
 PAIR-BST 데이터셋 benchmark의 공식 코드 저장소입니다.
 
 [데이터셋](https://doi.org/10.25452/figshare.plus.c.8223469) | 논문: 출판 후 링크 제공 | [English](README.md)

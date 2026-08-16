@@ -2,6 +2,10 @@
 
 ## A region-level histopathology dataset for bone and soft tissue tumors
 
+**Authors:** Gyu Yeong Kim, Yongjun Jeon, Hoyeon Jeong, Donggeon Lee, Seungkyun Lee, Hyungbin Kim, Yurimi Lee, Jihwan Kim, Seog-yun Park, Kyu-Hwan Jung, David Joon Ho, June Hyuk Kim, and Yoon-La Choi
+
+**Affiliations:** Samsung Medical Center · Sungkyunkwan University · National Cancer Center · The State University of New York, Korea
+
 Official code repository for the PAIR-BST dataset benchmark.
 
 [Dataset](https://doi.org/10.25452/figshare.plus.c.8223469) | Paper: link forthcoming | [한국어](README_KO.md)
