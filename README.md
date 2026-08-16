@@ -6,6 +6,10 @@ Official code repository for the PAIR-BST dataset benchmark.
 
 [Dataset](https://doi.org/10.25452/figshare.plus.c.8223469) | Paper: link forthcoming | [한국어](README_KO.md)
 
+![Representative H&E-stained histopathology images from the 33 PAIR-BST diagnosis categories](docs/assets/pair-bst-figure-1.jpg)
+
+*Figure 1. Representative H&E-stained regions from the 33 histological diagnosis categories in PAIR-BST.*
+
 ## Publication status
 
 PAIR-BST is described in the manuscript *PAIR-BST: A region-level

@@ -6,6 +6,10 @@ PAIR-BST 데이터셋 benchmark의 공식 코드 저장소입니다.
 
 [데이터셋](https://doi.org/10.25452/figshare.plus.c.8223469) | 논문: 출판 후 링크 제공 | [English](README.md)
 
+![PAIR-BST의 33개 조직학적 진단 범주를 보여주는 대표 H&E 조직병리 이미지](docs/assets/pair-bst-figure-1.jpg)
+
+*Figure 1. PAIR-BST의 33개 조직학적 진단 범주를 대표하는 H&E 염색 영역.*
+
 ## 논문 공개 상태
 
 PAIR-BST는 *PAIR-BST: A region-level histopathology dataset for bone and soft
